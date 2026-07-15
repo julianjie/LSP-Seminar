@@ -24,39 +24,58 @@ class AuthController extends Controller
     /**
      * Handle login request
      */
-    public function login(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+public function login(Request $request)
+{
+    $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
 
-        if (Auth::attempt($credentials, $request->boolean('remember'))) {
-            $request->session()->regenerate();
-            $user = Auth::user();
+    // Cari akun berdasarkan email
+    $user = User::where('email', $request->email)->first();
 
-            // Cek status akun untuk peserta
-            if ($user->role === 'participant') {
-                if ($user->account_status === 'pending') {
-                    Auth::logout();
-                    return redirect()->route('login')->withErrors([
-                        'email' => 'Akun Anda belum disetujui oleh admin. Silakan tunggu verifikasi.',
-                    ])->with('error_status', 'pending');
-                } elseif ($user->account_status === 'rejected') {
-                    Auth::logout();
-                    return redirect()->route('login')->withErrors([
-                        'email' => 'Akun Anda ditolak oleh admin. Silakan hubungi admin untuk info lebih lanjut.',
-                    ])->with('error_status', 'rejected');
-                }
-            }
+    // Periksa email dan password terlebih dahulu
+    if (!$user || !Hash::check($request->password, $user->password)) {
+        return back()
+            ->withErrors([
+                'email' => 'Email atau password yang Anda masukkan salah.',
+            ])
+            ->onlyInput('email');
+    }
 
-            return $this->redirectBasedOnRole($user)->with('success', 'Selamat datang kembali, ' . $user->name . '!');
+    // Periksa status peserta sebelum membuat session login
+    if ($user->role === 'participant') {
+        if ($user->account_status === 'pending') {
+            return back()
+                ->withErrors([
+                    'email' => 'Akun Anda belum disetujui oleh admin. Silakan tunggu verifikasi.',
+                ])
+                ->with('error_status', 'pending')
+                ->onlyInput('email');
         }
 
-        return back()->withErrors([
-            'email' => 'Email atau password yang Anda masukkan salah.',
-        ])->onlyInput('email');
+        if ($user->account_status === 'rejected') {
+            return back()
+                ->withErrors([
+                    'email' => 'Akun Anda ditolak oleh admin. Silakan hubungi admin untuk informasi lebih lanjut.',
+                ])
+                ->with('error_status', 'rejected')
+                ->onlyInput('email');
+        }
     }
+
+    // Login hanya jika akun memang diperbolehkan masuk
+    Auth::login($user, $request->boolean('remember'));
+
+    // Regenerasi session setelah berhasil login
+    $request->session()->regenerate();
+
+    return $this->redirectBasedOnRole($user)
+        ->with(
+            'success',
+            'Selamat datang kembali, ' . $user->name . '!'
+        );
+}
 
     /**
      * Show registration form
