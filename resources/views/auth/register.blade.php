@@ -11,7 +11,7 @@
                     <div class="text-center mb-4">
                         <i class="bi bi-person-plus-fill text-warning fs-1"></i>
                         <h3 class="fw-bold mt-2">Daftar Akun Peserta</h3>
-                        <p class="text-muted small">Buat akun untuk mendaftar seminar sertifikasi LSP</p>
+                        <p class="text-muted small">Buat akun untuk mendaftar seminar</p>
                     </div>
 
                     <form action="{{ route('register') }}" method="POST">

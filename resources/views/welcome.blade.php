@@ -8,9 +8,9 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start animate-fade-in-up">
-                <span class="badge bg-warning text-dark fw-bold px-3 py-2 mb-3">LSP WEB DEVELOPER</span>
-                <h1 class="hero-title mb-4">Sistem Pendaftaran Seminar LSP</h1>
-                <p class="lead text-white-50 mb-5">Daftarkan diri Anda untuk mengikuti berbagai seminar berkualitas yang dirancang khusus untuk meningkatkan kompetensi pengembang web profesional Anda.</p>
+                <span class="badge bg-warning text-dark fw-bold px-3 py-2 mb-3">SEMINAR UMDP</span>
+                <h1 class="hero-title mb-4">Sistem Pendaftaran Seminar UMDP</h1>
+                <p class="lead text-white-50 mb-5">Daftarkan diri Anda untuk mengikuti berbagai seminar yang diselenggarakan oleh Universitas Multi Data Palembang guna menambah wawasan, pengetahuan, dan kompetensi.</p>
                 <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
                     <a href="{{ route('public.seminars') }}" class="btn btn-warning btn-lg fw-bold px-4 py-3 shadow-lg">Jelajahi Seminar</a>
                     @guest
@@ -23,8 +23,8 @@
                 <div class="p-4 bg-white bg-opacity-10 backdrop-blur rounded-4 shadow-lg border border-white border-opacity-10 d-inline-block">
                     <div class="bg-gradient bg-primary text-white p-5 rounded-4 text-center" style="max-width: 450px; min-height: 300px; background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%) !important;">
                         <i class="bi bi-mortarboard-fill display-1 mb-4 text-warning"></i>
-                        <h3 class="fw-bold">LSP-UMDP</h3>
-                        <p class="mb-0 text-white-50">Mengukur Kompetensi, Menjamin Kualitas Profesional Pengembang Web di Indonesia.</p>
+                        <h3 class="fw-bold">SEMINAR UMDP</h3>
+                        <p class="mb-0 text-white-50">Temukan dan ikuti berbagai seminar inspiratif yang diselenggarakan oleh Universitas Multi Data Palembang.</p>
                     </div>
                 </div>
             </div>
@@ -94,15 +94,15 @@
     <div class="container py-4">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Mengenai Sertifikasi LSP</h2>
-                <p>Sertifikasi kompetensi kerja adalah proses pemberian sertifikat kompetensi yang dilakukan secara sistematis dan obyektif melalui uji kompetensi sesuai Standar Kompetensi Kerja Nasional Indonesia (SKKNI).</p>
+                <h2 class="fw-bold mb-4">Mengenai Seminar UMDP</h2>
+                <p>Seminar UMDP merupakan kegiatan edukatif yang diselenggarakan oleh Universitas Multi Data Palembang untuk menambah wawasan, pengetahuan, dan kompetensi peserta melalui berbagai topik yang relevan dengan perkembangan ilmu pengetahuan dan teknologi.</p>
                 <div class="d-flex align-items-start gap-3 mt-4">
                     <div class="bg-primary bg-opacity-10 p-3 rounded-3 text-primary">
                         <i class="bi bi-check-circle-fill fs-4"></i>
                     </div>
                     <div>
-                        <h5 class="fw-bold mb-1">Terstandarisasi Nasional</h5>
-                        <p class="text-muted small mb-0">Materi uji kompetensi berpedoman pada standar BNSP dan kebutuhan industri teknologi informasi terkini.</p>
+                        <h5 class="fw-bold mb-1">Topik yang Bermanfaat</h5>
+                        <p class="text-muted small mb-0">Setiap seminar menghadirkan topik menarik dan relevan yang dapat membantu peserta meningkatkan pengetahuan serta keterampilan.</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-start gap-3 mt-4">
@@ -110,8 +110,8 @@
                         <i class="bi bi-shield-lock-fill fs-4"></i>
                     </div>
                     <div>
-                        <h5 class="fw-bold mb-1">Meningkatkan Kredibilitas</h5>
-                        <p class="text-muted small mb-0">Memiliki sertifikat kompetensi membuktikan keahlian Anda diakui secara sah di dunia kerja internasional.</p>
+                        <h5 class="fw-bold mb-1">Narasumber Berpengalaman</h5>
+                        <p class="text-muted small mb-0">Materi seminar disampaikan oleh narasumber yang berpengalaman dan kompeten dalam bidangnya.</p>
                     </div>
                 </div>
             </div>
@@ -128,21 +128,21 @@
                         <div class="p-4 bg-light rounded-4 shadow-sm text-center">
                             <i class="bi bi-journals display-5 text-primary mb-3"></i>
                             <h3 class="fw-bold mb-0">12+</h3>
-                            <span class="text-muted small">Seminar Berjalan</span>
+                            <span class="text-muted small">Seminar Terselenggara</span>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="p-4 bg-light rounded-4 shadow-sm text-center">
                             <i class="bi bi-award display-5 text-primary mb-3"></i>
                             <h3 class="fw-bold mb-0">100%</h3>
-                            <span class="text-muted small">Tersertifikasi BNSP</span>
+                            <span class="text-muted small">Materi Berkualitas</span>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="p-4 bg-light rounded-4 shadow-sm text-center">
                             <i class="bi bi-building display-5 text-primary mb-3"></i>
                             <h3 class="fw-bold mb-0">5+</h3>
-                            <span class="text-muted small">Institusi Mitra</span>
+                            <span class="text-muted small">Narasumber Profesional</span>
                         </div>
                     </div>
                 </div>

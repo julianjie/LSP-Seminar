@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title') - Panel Admin LSP Seminar</title>
+    <title>@yield('title') - Panel Admin Seminar</title>
     
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
             <div class="sidebar-header">
                 <a href="{{ route('admin.dashboard') }}" class="text-decoration-none d-flex align-items-center">
                     <i class="bi bi-mortarboard-fill text-warning me-2 fs-4"></i>
-                    <span class="text-white fw-bold fs-5">ADMIN<span class="text-warning">LSP</span></span>
+                    <span class="text-white fw-bold fs-5">ADMIN<span class="text-warning">UMDP</span></span>
                 </a>
             </div>
             <ul class="sidebar-menu">
@@ -142,7 +142,7 @@
 
             <!-- Footer -->
             <footer class="bg-white border-top py-3 text-center text-muted mt-auto small">
-                &copy; {{ date('Y') }} LSP-UMDP Admin Panel.
+                &copy; {{ date('Y') }} UMDP Admin Panel.
             </footer>
         </div>
     </div>

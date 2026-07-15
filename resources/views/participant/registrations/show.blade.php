@@ -153,7 +153,7 @@
                                 <span class="text-muted small d-block mb-1">Silakan transfer sebesar:</span>
                                 <h4 class="fw-bold text-danger mb-2">Rp {{ number_format($registration->seminar->price, 0, ',', '.') }}</h4>
                                 <span class="text-muted small d-block mb-1">Ke Rekening Bank Mandiri:</span>
-                                <strong class="text-dark">123-00-9876543-1 (a.n LSP UMDP)</strong>
+                                <strong class="text-dark">123-00-9876543-1 (a.n UMDP)</strong>
                             </div>
                         @endif
 
